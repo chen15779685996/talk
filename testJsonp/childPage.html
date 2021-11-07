@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>我是嵌入的iframe界面</h3>
+    <hr>
+    <button id="btn">点击隐藏父页面的iframe</button>
+    <span>主工程传入的用户名：</span>
+    <span id="userName"></span>
+
+
+    <script>
+        window.addEventListener('message', function(event) {
+            userName.innerHTML = event.data
+        })
+
+        btn.addEventListener('click', function() {
+            // window.top.postMessage('iframe界面通知主页面隐藏iframe', 'http://127.0.0.1:5500')
+            window.parent.postMessage('iframe界面通知主页面隐藏iframe', 'http://127.0.0.1:5500')
+        })
+    </script>
+</body>
+
+</html>
