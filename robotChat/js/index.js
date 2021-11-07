@@ -54,7 +54,7 @@
     var parentDiv = document.createElement('div')
     parentDiv.className = direction === 'right' ? 'chat-container self-container' : 'chat-container robot-container'
     var img = document.createElement('img')
-    img.src = direction === 'right' ? `./${baseUrl}img/avatar.jpg` : `./${baseUrl}img/robot.jpg`
+    img.src = direction === 'right' ? './img/avatar.jpg' : './img/robot.jpg'
     var childDiv = document.createElement('div')
     childDiv.className = 'chat-txt'
     childDiv.innerHTML = txt
